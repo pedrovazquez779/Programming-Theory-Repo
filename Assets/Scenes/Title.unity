@@ -1581,9 +1581,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2145400597}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: Exit
+      - m_Target: {fileID: 619006416}
+        m_TargetAssemblyTypeName: UITitleManager, Assembly-CSharp
+        m_MethodName: OnExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1714,9 +1714,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2145400597}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: LoadMainScene
+      - m_Target: {fileID: 619006416}
+        m_TargetAssemblyTypeName: UITitleManager, Assembly-CSharp
+        m_MethodName: OnStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
