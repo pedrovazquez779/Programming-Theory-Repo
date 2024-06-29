@@ -1,24 +1,25 @@
 public class Chihuahua : Dog
 {
-    private void Awake()
+    protected override void Awake()
     {
         Breed = "Chihuahua";
         LifeSpan = "+7 years";
         Size = "Small";
+        base.Awake();
     }
 
-    public override string Bark()
+    public override void Bark()
     {
-        return Breed + base.Bark();
+        Animator.SetInteger(AnimationID, 6);
     }
 
-    public override string MoveTail()
+    public override void MoveTail()
     {
-        return Breed + base.MoveTail();
+        Animator.SetInteger(AnimationID, 1);
     }
 
-    public override string SitDown()
+    public override void SitDown()
     {
-        return Breed + base.SitDown();
+        Animator.SetInteger(AnimationID, 7);
     }
 }

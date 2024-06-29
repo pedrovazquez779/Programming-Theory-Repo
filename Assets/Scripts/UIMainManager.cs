@@ -4,7 +4,7 @@ using UnityEngine;
 public class UIMainManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text welcomeText;
-    [SerializeField] private TMP_Text actionText;
+    [SerializeField] private TMP_Text informationText;
     [SerializeField] private Dog activeDog;
     [SerializeField] private Dog pug;
     [SerializeField] private Dog chihuahua;
@@ -38,10 +38,10 @@ public class UIMainManager : MonoBehaviour
         if (activeDog != null) activeDog.gameObject.SetActive(false);
         activeDog = dog;
         activeDog.gameObject.SetActive(true);
-        actionText.text = activeDog.PrintInformation();
+        informationText.text = activeDog.PrintInformation();
     }
 
-    public void OnBarkClick() => actionText.text = activeDog.Bark();
-    public void OnMoveTailClick() => actionText.text = activeDog.MoveTail();
-    public void OnSitDownClick() => actionText.text = activeDog.SitDown();
+    public void OnBarkClick() => activeDog.Bark();
+    public void OnMoveTailClick() => activeDog.MoveTail();
+    public void OnSitDownClick() => activeDog.SitDown();
 }
