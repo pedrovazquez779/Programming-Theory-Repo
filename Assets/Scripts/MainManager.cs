@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 # if UNITY_EDITOR
 using UnityEditor;
 # endif
@@ -16,10 +17,11 @@ public class MainManager : MonoBehaviour
     private string _playerName;
 
     // Properties
+    // ENCAPSULATION
     public string PlayerName
     {
-        get => _playerName;
-        set => _playerName = value != "" ? value : "Player";
+        set => _playerName = value;
+        get => !string.IsNullOrEmpty(_playerName) ? _playerName : "";
     }
 
     private void Awake()
@@ -43,9 +45,13 @@ public class MainManager : MonoBehaviour
     // LoadMainScene changes to main scene 
     public void LoadMainScene()
     {
-        // TODO change to main scene once created - Make sure main scene index is 1
-        Debug.Log("Load main scene");
-        // SceneManager.LoadScene(MainSceneIndex);
+        SceneManager.LoadScene(MainSceneIndex);
+    }
+
+    // LoadMenuScene changes to menu scene 
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene(MenuSceneIndex);
     }
 
     // Exit is used to quit the app
