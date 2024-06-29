@@ -5,6 +5,7 @@ public class UIMainManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text welcomeText;
     [SerializeField] private TMP_Text informationText;
+    [SerializeField] private GameObject actionBtns;
     [SerializeField] private Dog activeDog;
     [SerializeField] private Dog pug;
     [SerializeField] private Dog chihuahua;
@@ -39,6 +40,7 @@ public class UIMainManager : MonoBehaviour
         activeDog = dog;
         activeDog.gameObject.SetActive(true);
         informationText.text = activeDog.PrintInformation();
+        actionBtns.SetActive(true);
     }
 
     public void OnBarkClick() => activeDog.Bark();
